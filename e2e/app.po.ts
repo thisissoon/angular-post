@@ -2,10 +2,27 @@ import { browser, by, element } from 'protractor';
 
 export class AppPage {
   navigateTo() {
-    return browser.get('/');
+    browser.get('/');
+    return browser.wait(() => this.getPostWidgetPresent());
   }
 
-  getParagraphText() {
-    return element(by.css('sn-root h1')).getText();
+  getPostWidget() {
+    return element(by.css('sn-root .pw-widget'));
+  }
+
+  getPostWidgetPresent() {
+    return this.getPostWidget().isPresent();
+  }
+
+  getPostButtons() {
+    return element.all(by.css('sn-root .pw-button'));
+  }
+
+  getPostButton(i: number) {
+    return this.getPostButtons().get(i);
+  }
+
+  getPostButtonsCount() {
+    return this.getPostButtons().count();
   }
 }

@@ -5,10 +5,14 @@ describe('angular-post App', () => {
 
   beforeEach(() => {
     page = new AppPage();
+    page.navigateTo();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to sn!');
+  it('should render post widgets', () => {
+    expect(page.getPostWidgetPresent()).toBeTruthy();
+  });
+
+  it('should render post buttons', () => {
+    expect(page.getPostButtonsCount()).toBeGreaterThan(0);
   });
 });

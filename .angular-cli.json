@@ -51,6 +51,11 @@
   "test": {
     "karma": {
       "config": "./karma.conf.js"
+    },
+    "codeCoverage": {
+      "exclude": [
+        "./src/app/post/shared/post-mock.ts"
+      ]
     }
   },
   "defaults": {
