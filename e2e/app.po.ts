@@ -1,8 +1,8 @@
 import { browser, by, element } from 'protractor';
 
 export class AppPage {
-  navigateTo() {
-    browser.get('/');
+  navigateTo(path: string = '/') {
+    browser.get(path);
     return browser.wait(() => this.getPostWidgetPresent());
   }
 
@@ -24,5 +24,18 @@ export class AppPage {
 
   getPostButtonsCount() {
     return this.getPostButtons().count();
+  }
+
+  getNavLinks() {
+    return element.all(by.css('nav a'));
+  }
+
+  getNavLink(i: number) {
+    return this.getNavLinks().get(i);
+  }
+
+  clickNavLink(i: number) {
+    this.getNavLink(i).click();
+    return browser.wait(() => this.getPostWidgetPresent());
   }
 }

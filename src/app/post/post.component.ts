@@ -10,6 +10,10 @@ import {
 import { Post } from './shared/post-token';
 import { PostPlatform } from './shared/post.model';
 import { PostOptions } from './shared/post-options.model';
+import { Observable } from 'rxjs/Observable';
+import { take, filter, takeUntil, tap } from 'rxjs/operators';
+import 'rxjs/add/observable/interval';
+import 'rxjs/add/observable/of';
 
 @Component({
   selector: 'sn-post',
@@ -58,12 +62,14 @@ export class PostComponent implements AfterViewInit {
    * @param {PostPlatform} postRef
    * @memberof PostComponent
    */
-  constructor(@Inject(Post) public postRef: PostPlatform) { }
+  constructor(@Inject(Post) private postRef: PostPlatform) { }
   /**
    * Initalise post widget
    * @memberof PostComponent
    */
   public ngAfterViewInit(): void {
-    this.postRef.createWidget(this.widget.nativeElement, this.options);
+    if (this.postRef) {
+      this.postRef.createWidget(this.widget.nativeElement, this.options);
+    }
   }
 }
