@@ -22,7 +22,7 @@ This is a simple library for [Angular][angular], implemented in the [Angular Pac
 
 `app.module.ts`
 ```ts
-import { PostModule } from '@thisissoon/angular-post';
+import { PostModule, Post } from '@thisissoon/angular-post';
 
 const postProviders = [
   { provide: Post, useFactory: () => window['postPlatform'] }
