@@ -4,10 +4,15 @@ import { PostComponent } from './post.component';
 import { PostPlatformMock } from './shared/post-mock';
 import { Post } from './shared/post-token';
 
-export const defaultProviders = [
+const defaultProviders = [
   { provide: Post, useValue: PostPlatformMock }
 ];
 
+/**
+ * A simple lightweight library to use Po.st social
+ * sharing widgets in Angular apps
+ *
+ */
 @NgModule({
   declarations: [PostComponent],
   exports: [PostComponent]
@@ -18,9 +23,6 @@ export class PostModule {
    * are only provided once but allows the module to still be imported
    * into other modules without reproviding services.
    *
-   * @static
-   * @param {Provider[]} [providers=defaultProviders]
-   * @returns {ModuleWithProviders}
    * @memberof PostModule
    */
   static forRoot(providers: Provider[] = defaultProviders): ModuleWithProviders {

@@ -15,6 +15,26 @@ import { take, filter, takeUntil, tap } from 'rxjs/operators';
 import 'rxjs/add/observable/interval';
 import 'rxjs/add/observable/of';
 
+/**
+ * @example
+ * ```
+ * <sn-post
+ *   [widgetId]="'REPLACE_WITH_WIDGET_ID'"
+ *   [url]="'https://foo.com'"
+ *   [title]="'Home page'"
+ *   [options]="{
+ *     buttons: [
+ *       { id: 'twitter' },
+ *       { id: 'linkedin' },
+ *       { id: 'facebook' }
+ *     ],
+ *     label: false,
+ *     radius: 'square'
+ *   }">
+ * </sn-post>
+ * ```
+ *
+ */
 @Component({
   selector: 'sn-post',
   templateUrl: './post.component.html',
@@ -23,21 +43,18 @@ import 'rxjs/add/observable/of';
 export class PostComponent implements AfterViewInit {
   /**
    * URL to be shared
-   * @type {string}
    * @memberof PostComponent
    */
   @Input()
   public url: string;
   /**
    * Title of page to share include in share post
-   * @type {string}
    * @memberof PostComponent
    */
   @Input()
   public title: string;
   /**
    * Po.st widget id
-   * @type {string}
    * @memberof PostComponent
    */
   @Input()
@@ -45,21 +62,18 @@ export class PostComponent implements AfterViewInit {
   /**
    * Config options for widget.
    * Equivalent of `pwidget_config` object
-   * @type {PostOptions}
    * @memberof PostComponent
    */
   @Input()
   public options: PostOptions = {};
   /**
    * Element to be replaced with share widget
-   * @type {ElementRef}
    * @memberof PostComponent
    */
   @ViewChild('widget')
   public widget: ElementRef;
   /**
    * Creates an instance of PostComponent.
-   * @param {PostPlatform} postRef
    * @memberof PostComponent
    */
   constructor(@Inject(Post) private postRef: PostPlatform) { }
