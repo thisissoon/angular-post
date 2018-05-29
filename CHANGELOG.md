@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/thisissoon/angular-post/compare/v1.0.0...v1.1.0) (2018-05-29)
+
+
+### Features
+
+* **post:** adding support for angular 6 ([0a6bc19](https://github.com/thisissoon/angular-post/commit/0a6bc19))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/thisissoon/angular-post/compare/v1.0.0-rc.0...v1.0.0) (2018-01-30)
 
