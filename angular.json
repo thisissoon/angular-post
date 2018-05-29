@@ -63,6 +63,7 @@
           "options": {
             "main": "src/test.ts",
             "karmaConfig": "./karma.conf.js",
+            "codeCoverageExclude": ["src/app/post/shared/**"],
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "progress": false,
