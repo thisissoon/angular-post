@@ -10,10 +10,6 @@ import {
 import { Post } from './shared/post-token';
 import { PostPlatform } from './shared/post.model';
 import { PostOptions } from './shared/post-options.model';
-import { Observable } from 'rxjs/Observable';
-import { take, filter, takeUntil, tap } from 'rxjs/operators';
-import 'rxjs/add/observable/interval';
-import 'rxjs/add/observable/of';
 
 /**
  * @example
