@@ -7,8 +7,6 @@
 
 A simple lightweight library to use [Po.st][post] social sharing widgets in [Angular][angular] apps
 
-This project was generated with [Angular CLI][angular-cli] version 1.6.6.
-
 This is a simple library for [Angular][angular], implemented in the [Angular Package Format v5.0](https://docs.google.com/document/d/1CZC2rcpxffTDfRDs6p1cfbmKNLA6x5O-NtkJglDaBVs/edit#heading=h.k0mh3o8u5hx).
 
 ## Install
