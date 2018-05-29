@@ -4,4 +4,4 @@ import { Component } from '@angular/core';
   selector: 'sn-about',
   templateUrl: './about.component.html'
 })
-export class AboutComponent { }
+export class AboutComponent {}

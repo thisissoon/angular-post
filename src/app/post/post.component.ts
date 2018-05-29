@@ -41,38 +41,33 @@ export class PostComponent implements AfterViewInit {
    * URL to be shared
    * @memberof PostComponent
    */
-  @Input()
-  public url: string;
+  @Input() public url: string;
   /**
    * Title of page to share include in share post
    * @memberof PostComponent
    */
-  @Input()
-  public title: string;
+  @Input() public title: string;
   /**
    * Po.st widget id
    * @memberof PostComponent
    */
-  @Input()
-  public widgetId: string;
+  @Input() public widgetId: string;
   /**
    * Config options for widget.
    * Equivalent of `pwidget_config` object
    * @memberof PostComponent
    */
-  @Input()
-  public options: PostOptions = {};
+  @Input() public options: PostOptions = {};
   /**
    * Element to be replaced with share widget
    * @memberof PostComponent
    */
-  @ViewChild('widget')
-  public widget: ElementRef;
+  @ViewChild('widget') public widget: ElementRef;
   /**
    * Creates an instance of PostComponent.
    * @memberof PostComponent
    */
-  constructor(@Inject(Post) private postRef: PostPlatform) { }
+  constructor(@Inject(Post) private postRef: PostPlatform) {}
   /**
    * Initalise post widget
    * @memberof PostComponent

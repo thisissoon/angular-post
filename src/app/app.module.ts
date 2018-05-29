@@ -14,21 +14,16 @@ const routes = [
   { path: '**', redirectTo: '' }
 ];
 
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    AboutComponent
-  ],
+  declarations: [AppComponent, HomeComponent, AboutComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     PostModule.forRoot([
-      { provide: Post, useFactory: (() => window['postPlatform']) }
+      { provide: Post, useFactory: () => window['postPlatform'] }
     ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -4,9 +4,7 @@ import { PostComponent } from './post.component';
 import { PostPlatformMock } from './shared/post-mock';
 import { Post } from './shared/post-token';
 
-const defaultProviders = [
-  { provide: Post, useValue: PostPlatformMock }
-];
+const defaultProviders = [{ provide: Post, useValue: PostPlatformMock }];
 
 /**
  * A simple lightweight library to use Po.st social
@@ -25,7 +23,9 @@ export class PostModule {
    *
    * @memberof PostModule
    */
-  static forRoot(providers: Provider[] = defaultProviders): ModuleWithProviders {
+  static forRoot(
+    providers: Provider[] = defaultProviders
+  ): ModuleWithProviders {
     return {
       ngModule: PostModule,
       providers: providers

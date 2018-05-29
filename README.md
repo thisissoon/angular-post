@@ -3,6 +3,7 @@
 [![Build Status][travis-badge]][travis]
 [![Coverage Status][coveralls-badge]][coveralls]
 [![Commitizen friendly][commitizen-badge]][commitizen]
+[![code style: prettier][prettier-badge]][prettier-badge-url]
 
 A simple lightweight library to use [Po.st][post] social sharing widgets in [Angular][angular] apps
 
@@ -21,6 +22,7 @@ This is a simple library for [Angular][angular], implemented in the [Angular Pac
 `yarn add @thisissoon/angular-post`
 
 `app.module.ts`
+
 ```ts
 import { PostModule, Post } from '@thisissoon/angular-post';
 
@@ -29,16 +31,15 @@ const postProviders = [
 ];
 
 @NgModule({
-  imports: [
-    PostModule.forRoot(postProviders)
-  ]
+  imports: [PostModule.forRoot(postProviders)]
 })
-export class AppModule { }
+export class AppModule {}
 ```
 
 `index.html`
 
 Add the Po.st script to your `index.html` file inside your `<head>` tag as in their instructions
+
 ```html
 <script type="text/javascript">
   (function () {
@@ -51,15 +52,14 @@ Add the Po.st script to your `index.html` file inside your `<head>` tag as in th
     x.parentNode.insertBefore(s, x);
   })();
 </script>
-
 ```
-
 
 ## Example
 
 A full working example can be found in the [src/app](https://github.com/thisissoon/angular-post/tree/master/src/app) folder.
 
 ### `app.component.html`
+
 ```html
 <sn-post
   [widgetId]="'REPLACE_WITH_WIDGET_ID'"
@@ -86,11 +86,10 @@ A full working example can be found in the [src/app](https://github.com/thisisso
 
 ## Options
 
-* `widgetId`:(string): can be found in post widget settings
-* `url`(string): URL to share
-* `title`(string): title of post to share
-* `options`(object): options to pass on widget located [here][post-options]
-
+- `widgetId`:(string): can be found in post widget settings
+- `url`(string): URL to share
+- `title`(string): title of post to share
+- `options`(object): options to pass on widget located [here][post-options]
 
 ## Development server
 
@@ -103,7 +102,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
 
 ## Running unit tests
 
@@ -125,19 +123,20 @@ Run `npm run release` to create a new release. This will use [Standard Version][
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README][angular-cli-readme].
 
-
-[travis]:https://travis-ci.org/thisissoon/angular-post
-[travis-badge]:https://travis-ci.org/thisissoon/angular-post.svg?branch=master
-[coveralls]:https://coveralls.io/github/thisissoon/angular-post?branch=master
-[coveralls-badge]:https://coveralls.io/repos/github/thisissoon/angular-post/badge.svg?branch=master
-[post]:https://www.po.st/
-[post-options]:https://post.zendesk.com/hc/en-us/articles/208458026-v4-Global-Configuration-window-pwidget-config-
-[angular]:https://angular.io/
-[commitizen]:http://commitizen.github.io/cz-cli/
-[commitizen-badge]:https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
-[conventional-changelog]:https://github.com/conventional-changelog/conventional-changelog
-[standard-version]:https://github.com/conventional-changelog/standard-version
-[Karma]:https://karma-runner.github.io
-[Protractor]:http://www.protractortest.org/
-[angular-cli]:https://github.com/angular/angular-cli
-[angular-cli-readme]:https://github.com/angular/angular-cli/blob/master/README.md
+[travis]: https://travis-ci.org/thisissoon/angular-post
+[travis-badge]: https://travis-ci.org/thisissoon/angular-post.svg?branch=master
+[coveralls]: https://coveralls.io/github/thisissoon/angular-post?branch=master
+[coveralls-badge]: https://coveralls.io/repos/github/thisissoon/angular-post/badge.svg?branch=master
+[prettier-badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=shield
+[prettier-badge-url]: https://github.com/prettier/prettier
+[post]: https://www.po.st/
+[post-options]: https://post.zendesk.com/hc/en-us/articles/208458026-v4-Global-Configuration-window-pwidget-config-
+[angular]: https://angular.io/
+[commitizen]: http://commitizen.github.io/cz-cli/
+[commitizen-badge]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
+[conventional-changelog]: https://github.com/conventional-changelog/conventional-changelog
+[standard-version]: https://github.com/conventional-changelog/standard-version
+[karma]: https://karma-runner.github.io
+[protractor]: http://www.protractortest.org/
+[angular-cli]: https://github.com/angular/angular-cli
+[angular-cli-readme]: https://github.com/angular/angular-cli/blob/master/README.md

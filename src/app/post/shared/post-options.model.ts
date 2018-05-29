@@ -10,7 +10,7 @@ export interface PostOptions {
     minWords?: number;
     readMoreText?: boolean | string;
     readMoreUrl?: string;
-    imageSize?: [number, number]
+    imageSize?: [number, number];
   };
   shareQuote?: boolean;
   shareQuoteOptions?: {
@@ -23,36 +23,36 @@ export interface PostOptions {
   trackAddressBar?: boolean;
   googleAnalytics?: boolean;
   googleAnalyticsOptions?: {
-    gaTrackingId?: string | string[],
+    gaTrackingId?: string | string[];
     trackEvents?: boolean;
     trackSocialInteractions?: boolean;
     trackOptions?: {
       nonInteraction?: false;
       pagePath?: string;
-    }
+    };
   };
   defaults?: {
     url?: string;
-    image?:	string;
-    title?:	string;
+    image?: string;
+    title?: string;
     layout?: 'horizontal' | 'vertical';
-    radius?: 'square' | 'rounded' |'circle' | number;
-    size?: 24 |	32 | 48	| 64;
-    counter?:	boolean | 'vertical' | 'horizontal'
+    radius?: 'square' | 'rounded' | 'circle' | number;
+    size?: 24 | 32 | 48 | 64;
+    counter?: boolean | 'vertical' | 'horizontal';
     label?: boolean;
     padding?: boolean | true | number;
-    view?: 'auto' |	'full';
+    view?: 'auto' | 'full';
     buttonColor?: string;
     buttonBackground?: string;
     hover?: boolean;
     transformations?: {
       tracking?: boolean;
-      shorten?:	boolean;
+      shorten?: boolean;
     };
     afterShareOptions?: {
       tracking?: boolean;
-      shorten?:	boolean;
-    }
+      shorten?: boolean;
+    };
     handlers?: {
       onshare?: Function;
       onshowaftershare?: Function;
@@ -64,7 +64,7 @@ export interface PostOptions {
     services?: {
       twitter?: {
         via?: string;
-      }
+      };
     };
     popup?: {
       click?: boolean;

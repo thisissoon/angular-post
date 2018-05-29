@@ -16,12 +16,9 @@ describe('PostComponent', () => {
     spy = spyOn(postPlatformMock, 'createWidget');
 
     TestBed.configureTestingModule({
-      providers: [
-        { provide: Post, useValue: postPlatformMock }
-      ],
-      declarations: [ PostComponent ]
-    })
-    .compileComponents();
+      providers: [{ provide: Post, useValue: postPlatformMock }],
+      declarations: [PostComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
