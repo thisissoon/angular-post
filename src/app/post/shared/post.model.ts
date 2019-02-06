@@ -5,7 +5,7 @@ export interface PostPlatform {
   updateWidget: (selector: string | HTMLElement, options?: PostOptions) => void;
   createCounter: (
     selector: string | HTMLElement,
-    options?: PostOptions
+    options?: PostOptions,
   ) => void;
   init: (selector: string | HTMLElement) => void;
 }

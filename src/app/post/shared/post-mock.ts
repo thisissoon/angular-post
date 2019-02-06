@@ -9,5 +9,5 @@ export const PostPlatformMock: PostPlatform = {
   createWidget: (selector: string | HTMLElement, options: PostOptions) => null,
   updateWidget: (selector: string | HTMLElement, options: PostOptions) => null,
   createCounter: (selector: string | HTMLElement, options: PostOptions) => null,
-  init: (selector: string | HTMLElement) => null
+  init: (selector: string | HTMLElement) => null,
 };

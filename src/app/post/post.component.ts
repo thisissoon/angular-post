@@ -4,7 +4,7 @@ import {
   Input,
   Inject,
   ViewChild,
-  ElementRef
+  ElementRef,
 } from '@angular/core';
 
 import { Post } from './shared/post-token';
@@ -34,7 +34,7 @@ import { PostOptions } from './shared/post-options.model';
 @Component({
   selector: 'sn-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss']
+  styleUrls: ['./post.component.scss'],
 })
 export class PostComponent implements AfterViewInit {
   /**

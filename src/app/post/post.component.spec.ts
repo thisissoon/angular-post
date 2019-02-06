@@ -17,7 +17,7 @@ describe('PostComponent', () => {
 
     TestBed.configureTestingModule({
       providers: [{ provide: Post, useValue: postPlatformMock }],
-      declarations: [PostComponent]
+      declarations: [PostComponent],
     }).compileComponents();
   }));
 

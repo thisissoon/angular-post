@@ -13,7 +13,7 @@ const defaultProviders = [{ provide: Post, useValue: PostPlatformMock }];
  */
 @NgModule({
   declarations: [PostComponent],
-  exports: [PostComponent]
+  exports: [PostComponent],
 })
 export class PostModule {
   /**
@@ -24,11 +24,11 @@ export class PostModule {
    * @memberof PostModule
    */
   static forRoot(
-    providers: Provider[] = defaultProviders
+    providers: Provider[] = defaultProviders,
   ): ModuleWithProviders {
     return {
       ngModule: PostModule,
-      providers: providers
+      providers: providers,
     };
   }
 }

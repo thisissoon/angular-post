@@ -1,6 +1,6 @@
 # Angular Post
 
-[![Build Status][travis-badge]][travis]
+[![Build Status][circle-badge]][circle]
 [![Coverage Status][coveralls-badge]][coveralls]
 [![Commitizen friendly][commitizen-badge]][commitizen]
 [![code style: prettier][prettier-badge]][prettier-badge-url]
@@ -25,11 +25,11 @@ This is a simple library for [Angular][angular], implemented in the [Angular Pac
 import { PostModule, Post } from '@thisissoon/angular-post';
 
 const postProviders = [
-  { provide: Post, useFactory: () => window['postPlatform'] }
+  { provide: Post, useFactory: () => window['postPlatform'] },
 ];
 
 @NgModule({
-  imports: [PostModule.forRoot(postProviders)]
+  imports: [PostModule.forRoot(postProviders)],
 })
 export class AppModule {}
 ```
@@ -40,12 +40,13 @@ Add the Po.st script to your `index.html` file inside your `<head>` tag as in th
 
 ```html
 <script type="text/javascript">
-  (function () {
+  (function() {
     var s = document.createElement('script');
     s.type = 'text/javascript';
     s.async = true;
-    s.src = ('https:' == document.location.protocol ? 'https://s' : 'http://i')
-      + '.po.st/static/v4/post-widget.js#publisherKey=<REPLACE_WITH_ACCOUNT_ID>';
+    s.src =
+      ('https:' == document.location.protocol ? 'https://s' : 'http://i') +
+      '.po.st/static/v4/post-widget.js#publisherKey=<REPLACE_WITH_ACCOUNT_ID>';
     var x = document.getElementsByTagName('script')[0];
     x.parentNode.insertBefore(s, x);
   })();
@@ -78,7 +79,8 @@ A full working example can be found in the [src/app](https://github.com/thisisso
     padding: false,
     view: 'auto',
     shareNewWindow: true
-  }">
+  }"
+>
 </sn-post>
 ```
 
@@ -121,8 +123,8 @@ Run `npm run release` to create a new release. This will use [Standard Version][
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README][angular-cli-readme].
 
-[travis]: https://travis-ci.org/thisissoon/angular-post
-[travis-badge]: https://travis-ci.org/thisissoon/angular-post.svg?branch=master
+[circle]: https://circleci.com/gh/thisissoon/angular-post.svg?style=shield
+[circle-badge]: https://circleci.com/gh/thisissoon/angular-post
 [coveralls]: https://coveralls.io/github/thisissoon/angular-post?branch=master
 [coveralls-badge]: https://coveralls.io/repos/github/thisissoon/angular-post/badge.svg?branch=master
 [prettier-badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=shield

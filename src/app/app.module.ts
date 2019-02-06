@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home.component';
 const routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
@@ -20,10 +20,10 @@ const routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     PostModule.forRoot([
-      { provide: Post, useFactory: () => window['postPlatform'] }
-    ])
+      { provide: Post, useFactory: () => window['postPlatform'] },
+    ]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
